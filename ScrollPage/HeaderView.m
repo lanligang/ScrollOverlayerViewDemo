@@ -17,13 +17,14 @@
 	    CGPoint p = [pan velocityInView:pan.view];
 		 CGFloat x = ABS(p.x);
 		CGFloat y = ABS(p.y);
-		if (y>x) {
+		if (y > x) {
+			//纵向滚动
 			return YES;
 		}else{
+			//横向滚动
 			return NO;
 		}
 	}
-	return YES;
+	return NO;
 }
-
 @end
