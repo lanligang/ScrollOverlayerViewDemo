@@ -1,0 +1,9 @@
+target ‘ScrollPage’ do
+    platform :ios, '9.0'
+	# 增加内存泄漏检测
+	pod 'MLeaksFinder'
+	#下拉刷新
+	pod 'MJRefresh'
+
+end
+

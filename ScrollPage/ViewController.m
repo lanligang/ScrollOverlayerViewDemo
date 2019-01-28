@@ -22,18 +22,22 @@
 @end
 
 @implementation ViewController
-
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self.navigationController setNavigationBarHidden:YES animated:animated];
+}
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	
+	// =======================================
 	HeaderView *headerView = [HeaderView new];
 	UIView *pageView = [UIView new];
 	CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-	pageView.frame = CGRectMake(0, 200 - 40.0f, screenWidth, 40.0f);
+	pageView.frame = CGRectMake(0, 300 - 40.0f, screenWidth, 40.0f);
 	pageView.backgroundColor = [UIColor whiteColor];
 	[headerView addSubview:pageView];
 	_pageView = pageView;
-	headerView.frame = CGRectMake(0, 0, screenWidth, 200);
+	headerView.frame = CGRectMake(0, 0, screenWidth, 300);
 	BasePageViewController *pageVc = [[BasePageViewController alloc]initWithHeaderView:headerView andDelegate:self];
 	_pageVc = pageVc;
 
@@ -47,11 +51,16 @@
 	pageVc.view.frame = self.view.bounds;
 
 	[self.view addSubview:pageVc.view];
+	// =======================================
 
-	SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 160.0f) imageURLStringsGroup:@[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548649186366&di=db14eeade6ddc6453e7faa0fff4f28a0&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F05%2F01%2F16pic_501154_b.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548649186366&di=960e621b49a76f30e2f2d20fdd68209c&imgtype=0&src=http%3A%2F%2Fpic5.photophoto.cn%2F20071217%2F0008020241208713_b.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548649186364&di=3abc37c3a44aba40224ad03584c7e56a&imgtype=0&src=http%3A%2F%2Fpic9.photophoto.cn%2F20081229%2F0034034885643767_b.jpg"]];
+	SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 300 - 40.0f) imageURLStringsGroup:@[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548669791927&di=e3c3c33b4df7b8af4cc717d61bf68c62&imgtype=0&src=http%3A%2F%2Fseopic.699pic.com%2Fphoto%2F50080%2F5511.jpg_wh1200.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548669791927&di=2fb9b372bd252a2570338855f67f193e&imgtype=0&src=http%3A%2F%2Fpic16.nipic.com%2F20110421%2F468957_140932500145_2.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548669791926&di=f5435bb841f8f815901efe795320a924&imgtype=0&src=http%3A%2F%2Fimg05.tooopen.com%2Fimages%2F20141121%2Fsy_75465683182.jpg"]];
+
 	[headerView addSubview:scrollView];
+
 	NSString *titles[] = {@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传",@"雪山飞狐"};
+
 	CGFloat width = CGRectGetWidth(self.view.frame)/4.0f;
+
 	for (int i = 0; i< 4; i++) {
 		UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 		btn.tag = 10+ i;

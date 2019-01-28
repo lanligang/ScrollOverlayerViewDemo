@@ -39,7 +39,11 @@
 	_bgScrollView.contentSize = (CGSize){CGRectGetWidth(self.view.frame)*pageCount, 0};
 	[self.view addSubview:self.headerView];
 	self.headerMaxHeight = CGRectGetHeight(_headerView.frame) - self.overlayerHeight;
-
+	if (@available (iOS 11.0, *)) {
+		_bgScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+	}else{
+		self.automaticallyAdjustsScrollViewInsets = NO;
+	}
 	[_bgScrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
 
 	[self loadSubViewControllerWithPage:0];

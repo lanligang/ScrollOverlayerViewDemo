@@ -1,2 +1,1 @@
-# ScrollOverlayerViewDemo
-![效果图](img.png)
+![效果图](demoGif.gif)

@@ -87,6 +87,8 @@
 		8F7CB82121FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
 		8F7CB82221FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
 		8F7CB82321FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
+		8F7CB82621FEE56100E6FD83 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB82521FEE56100E6FD83 /* RootViewController.m */; };
+		E18C14466DBF90582421A4A7 /* libPods-ScrollPage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 499A1A88EF44D6AE413DD2D5 /* libPods-ScrollPage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		499A1A88EF44D6AE413DD2D5 /* libPods-ScrollPage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollPage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2B7B2321FD9D5700909B55 /* ScrollPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2B7B2621FD9D5700909B55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C2B7B2721FD9D5700909B55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -176,6 +179,10 @@
 		8F7CB7D321FE916B00E6FD83 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		8F7CB7D521FE916B00E6FD83 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		8F7CB82421FEE56100E6FD83 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		8F7CB82521FEE56100E6FD83 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C7E222C47DB523ED4617DE30 /* Pods-ScrollPage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollPage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollPage/Pods-ScrollPage.debug.xcconfig"; sourceTree = "<group>"; };
+		EB75FDAF5A4E2EB04CAB9EC2 /* Pods-ScrollPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollPage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollPage/Pods-ScrollPage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18C14466DBF90582421A4A7 /* libPods-ScrollPage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +218,8 @@
 				4C2B7B3E21FD9D6900909B55 /* ScrollPageTests */,
 				4C2B7B4921FD9D6900909B55 /* ScrollPageUITests */,
 				4C2B7B2421FD9D5700909B55 /* Products */,
+				851C7809A2C4624F33197565 /* Pods */,
+				8B8720FA819D0AB831EBE313 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -228,14 +238,16 @@
 			children = (
 				4C2B7B2621FD9D5700909B55 /* AppDelegate.h */,
 				4C2B7B2721FD9D5700909B55 /* AppDelegate.m */,
+				8F7CB82421FEE56100E6FD83 /* RootViewController.h */,
+				8F7CB82521FEE56100E6FD83 /* RootViewController.m */,
 				4C2B7B2921FD9D5700909B55 /* ViewController.h */,
 				4C2B7B2A21FD9D5700909B55 /* ViewController.m */,
 				4C2B7B5821FD9D9600909B55 /* BasePageViewController.h */,
 				4C2B7B5921FD9D9600909B55 /* BasePageViewController.m */,
-				4C2B7B5B21FDF3CF00909B55 /* SubTableViewController.h */,
-				4C2B7B5C21FDF3CF00909B55 /* SubTableViewController.m */,
 				4C2B7B5E21FE0BF800909B55 /* HeaderView.h */,
 				4C2B7B5F21FE0BF800909B55 /* HeaderView.m */,
+				4C2B7B5B21FDF3CF00909B55 /* SubTableViewController.h */,
+				4C2B7B5C21FDF3CF00909B55 /* SubTableViewController.m */,
 				8F7CB79D21FE916A00E6FD83 /* ThirdPart */,
 				4C2B7B2C21FD9D5700909B55 /* Main.storyboard */,
 				4C2B7B2F21FD9D6900909B55 /* Assets.xcassets */,
@@ -262,6 +274,23 @@
 				4C2B7B4C21FD9D6900909B55 /* Info.plist */,
 			);
 			path = ScrollPageUITests;
+			sourceTree = "<group>";
+		};
+		851C7809A2C4624F33197565 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7E222C47DB523ED4617DE30 /* Pods-ScrollPage.debug.xcconfig */,
+				EB75FDAF5A4E2EB04CAB9EC2 /* Pods-ScrollPage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B8720FA819D0AB831EBE313 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				499A1A88EF44D6AE413DD2D5 /* libPods-ScrollPage.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8F7CB79D21FE916A00E6FD83 /* ThirdPart */ = {
@@ -357,9 +386,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C2B7B4F21FD9D6900909B55 /* Build configuration list for PBXNativeTarget "ScrollPage" */;
 			buildPhases = (
+				39D4C0C902875F1DCC44FD3E /* [CP] Check Pods Manifest.lock */,
 				4C2B7B1F21FD9D5700909B55 /* Sources */,
 				4C2B7B2021FD9D5700909B55 /* Frameworks */,
 				4C2B7B2121FD9D5700909B55 /* Resources */,
+				B796A4064C7BFF65B9C973BA /* [CP] Embed Pods Frameworks */,
+				9311BF2E324EBE5ED32B758E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -475,6 +507,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39D4C0C902875F1DCC44FD3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollPage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9311BF2E324EBE5ED32B758E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ScrollPage/Pods-ScrollPage-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollPage/Pods-ScrollPage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B796A4064C7BFF65B9C973BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollPage/Pods-ScrollPage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C2B7B1F21FD9D5700909B55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -494,6 +580,7 @@
 				4C2B7B5A21FD9D9600909B55 /* BasePageViewController.m in Sources */,
 				8F7CB80F21FE916B00E6FD83 /* SDWebImagePrefetcher.m in Sources */,
 				4C2B7B2821FD9D5700909B55 /* AppDelegate.m in Sources */,
+				8F7CB82621FEE56100E6FD83 /* RootViewController.m in Sources */,
 				8F7CB80921FE916B00E6FD83 /* UIImage+MultiFormat.m in Sources */,
 				8F7CB7F421FE916B00E6FD83 /* UIImage+WebP.m in Sources */,
 				8F7CB80621FE916B00E6FD83 /* UIImage+GIF.m in Sources */,
@@ -723,6 +810,7 @@
 		};
 		4C2B7B5021FD9D6900909B55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7E222C47DB523ED4617DE30 /* Pods-ScrollPage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -741,6 +829,7 @@
 		};
 		4C2B7B5121FD9D6900909B55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB75FDAF5A4E2EB04CAB9EC2 /* Pods-ScrollPage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
