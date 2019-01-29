@@ -88,6 +88,8 @@
 		8F7CB82221FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
 		8F7CB82321FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
 		8F7CB82621FEE56100E6FD83 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB82521FEE56100E6FD83 /* RootViewController.m */; };
+		8FFC8B2A21FFEA7D00700558 /* BaseSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */; };
+		8FFC8B2D21FFF42000700558 /* SubCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8B2C21FFF42000700558 /* SubCollectionViewController.m */; };
 		E18C14466DBF90582421A4A7 /* libPods-ScrollPage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 499A1A88EF44D6AE413DD2D5 /* libPods-ScrollPage.a */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +183,10 @@
 		8F7CB7D521FE916B00E6FD83 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		8F7CB82421FEE56100E6FD83 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		8F7CB82521FEE56100E6FD83 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		8FFC8B2821FFEA7D00700558 /* BaseSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseSubViewController.h; sourceTree = "<group>"; };
+		8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseSubViewController.m; sourceTree = "<group>"; };
+		8FFC8B2B21FFF42000700558 /* SubCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubCollectionViewController.h; sourceTree = "<group>"; };
+		8FFC8B2C21FFF42000700558 /* SubCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubCollectionViewController.m; sourceTree = "<group>"; };
 		C7E222C47DB523ED4617DE30 /* Pods-ScrollPage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollPage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollPage/Pods-ScrollPage.debug.xcconfig"; sourceTree = "<group>"; };
 		EB75FDAF5A4E2EB04CAB9EC2 /* Pods-ScrollPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollPage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollPage/Pods-ScrollPage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +254,10 @@
 				4C2B7B5F21FE0BF800909B55 /* HeaderView.m */,
 				4C2B7B5B21FDF3CF00909B55 /* SubTableViewController.h */,
 				4C2B7B5C21FDF3CF00909B55 /* SubTableViewController.m */,
+				8FFC8B2B21FFF42000700558 /* SubCollectionViewController.h */,
+				8FFC8B2C21FFF42000700558 /* SubCollectionViewController.m */,
+				8FFC8B2821FFEA7D00700558 /* BaseSubViewController.h */,
+				8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */,
 				8F7CB79D21FE916A00E6FD83 /* ThirdPart */,
 				4C2B7B2C21FD9D5700909B55 /* Main.storyboard */,
 				4C2B7B2F21FD9D6900909B55 /* Assets.xcassets */,
@@ -579,10 +589,12 @@
 				4C2B7B3621FD9D6900909B55 /* main.m in Sources */,
 				4C2B7B5A21FD9D9600909B55 /* BasePageViewController.m in Sources */,
 				8F7CB80F21FE916B00E6FD83 /* SDWebImagePrefetcher.m in Sources */,
+				8FFC8B2D21FFF42000700558 /* SubCollectionViewController.m in Sources */,
 				4C2B7B2821FD9D5700909B55 /* AppDelegate.m in Sources */,
 				8F7CB82621FEE56100E6FD83 /* RootViewController.m in Sources */,
 				8F7CB80921FE916B00E6FD83 /* UIImage+MultiFormat.m in Sources */,
 				8F7CB7F421FE916B00E6FD83 /* UIImage+WebP.m in Sources */,
+				8FFC8B2A21FFEA7D00700558 /* BaseSubViewController.m in Sources */,
 				8F7CB80621FE916B00E6FD83 /* UIImage+GIF.m in Sources */,
 				8F7CB7E221FE916B00E6FD83 /* TAPageControl.m in Sources */,
 				8F7CB81B21FE916B00E6FD83 /* UIImageView+WebCache.m in Sources */,

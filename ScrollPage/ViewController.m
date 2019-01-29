@@ -11,6 +11,7 @@
 #import "SubTableViewController.h"
 #import "HeaderView.h"
 #import "SDCycleScrollView.h"
+#import "SubCollectionViewController.h"
 
 @interface ViewController ()<PageViewControllerDelegate>
 {
@@ -66,8 +67,8 @@
 		btn.tag = 10+ i;
 		[_pageView addSubview:btn];
 		[btn setTitle:titles[i] forState:UIControlStateNormal];
-		[btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-		[btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[btn setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+		[btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
 		btn.frame = CGRectMake(i*width, 0, width, 40.0f);
 		[btn addTarget:self action:@selector(clickedAction:) forControlEvents:UIControlEventTouchUpInside];
 		if (i == 0) {
@@ -101,13 +102,16 @@
 }
 -(UIViewController *)loadSubVcWithPage:(NSInteger)page
 {
+	if (page %2 == 1) {
+		SubCollectionViewController *vc = [[SubCollectionViewController alloc]init];
+		return vc;
+	}
 	SubTableViewController *vc = [[SubTableViewController alloc]init];
 	return vc;
 }
-
--(void)pageScrollCurrentOffset:(CGPoint)offSet
+//滚动到第几页了
+-(void)scrollToPage:(NSInteger)page
 {
-	NSInteger page = (offSet.x + CGRectGetWidth(self.view.bounds)/2.0f)/CGRectGetWidth(self.view.bounds);
 	for (int i = 0; i< 4; i++) {
 		UIButton *btn = [_pageView viewWithTag:(10 + 	i )];
 		if (page == i) {
@@ -116,6 +120,10 @@
 			btn.selected = NO;
 		}
 	}
+}
+//横向偏移到什么位置了
+-(void)pageScrollCurrentOffset:(CGPoint)offSet
+{
 	[_pageView bringSubviewToFront:_lineView];
 	CGFloat width = CGRectGetWidth(self.view.frame)/8.0f;
 	_lineView.center = (CGPoint){width + offSet.x/4.0f,_lineView.center.y};

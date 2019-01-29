@@ -10,8 +10,7 @@
 
 #define SUBVIEW_TAG 1024
 
-@interface BasePageViewController ()
-
+@interface BasePageViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong)UIView *headerView;
 @property (nonatomic,strong)UIScrollView *bgScrollView;
 @property (nonatomic,weak)id <PageViewControllerDelegate>delegate;
@@ -33,6 +32,7 @@
     [super viewDidLoad];
 
 	[self.view addSubview:self.bgScrollView];
+	_bgScrollView.delegate = self;
 	_bgScrollView.frame = self.view.bounds;
 	_bgScrollView.tag = 2000;
 	NSInteger pageCount = [self.delegate numerOfPageWithPageViewController:self];
@@ -57,10 +57,37 @@
 	NSInteger maxPage = [self.delegate numerOfPageWithPageViewController:self];
 	//取绝对值
 	page = ABS(page) % maxPage;
+	if ([self.delegate respondsToSelector:@selector(scrollToPage:)]){
+		[self.delegate scrollToPage:page];
+	}
 	//动画滚动到某一页
 	[_bgScrollView setContentOffset:CGPointMake(page *width, 0) animated:YES];
-	
+	[self loadSubViewControllerWithPage:page];
+	[_bgScrollView bringSubviewToFront:_headerView];
 }
+
+#pragma mark UIScrollViewDelegate
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+	NSInteger page = (scrollView.contentOffset.x + CGRectGetWidth(scrollView.bounds)/2.0) / CGRectGetWidth(scrollView.bounds);
+	[self loadSubViewControllerWithPage:page];
+	if ([self.delegate respondsToSelector:@selector(scrollToPage:)]){
+		[self.delegate scrollToPage:page];
+	}
+	[_bgScrollView bringSubviewToFront:_headerView];
+	__weak typeof(self)ws = self;
+		//在这里修改手势保留只有一个手势存在
+	[self.childViewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+		UIScrollView *ascrollView = [self foundScrollViewWithViewController:obj];
+		if (obj.view.tag == page + SUBVIEW_TAG) {
+			[ws.bgScrollView addGestureRecognizer:ascrollView.panGestureRecognizer];
+		}else {
+			[ws.bgScrollView removeGestureRecognizer:ascrollView.panGestureRecognizer];
+			[ascrollView addGestureRecognizer:ascrollView.panGestureRecognizer];
+		}
+	}];
+}
+
 -(void)viewWillLayoutSubviews
 {
 	[super viewWillLayoutSubviews];
@@ -84,19 +111,18 @@
 -(void)pageScrollViewDidScroll:(UIScrollView *)scrollView
 {
 	NSInteger page = (scrollView.contentOffset.x + CGRectGetWidth(scrollView.bounds)/2.0) / CGRectGetWidth(scrollView.bounds);
-	[self loadSubViewControllerWithPage:page];
+	//[self loadSubViewControllerWithPage:page];
+
 	//调用外部
 	if ([self.delegate respondsToSelector:@selector(pageScrollCurrentOffset:)]) {
 		[self.delegate pageScrollCurrentOffset:scrollView.contentOffset];
 	}
+
 	_headerView.frame = CGRectMake(scrollView.contentOffset.x, CGRectGetMinY(_headerView.frame), CGRectGetWidth(_headerView.frame), CGRectGetHeight(_headerView.frame));
 	[scrollView bringSubviewToFront:_headerView];
 	//调用外部实现滚动到第几页
-	if ([self.delegate respondsToSelector:@selector(scrollToPage:)]){
-		[self.delegate scrollToPage:page];
-	}
 	__weak typeof(self)ws = self;
-	//在这里修改手势保留只有一个手势存在
+		//在这里修改手势保留只有一个手势存在
 	[self.childViewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 		UIScrollView *ascrollView = [self foundScrollViewWithViewController:obj];
 		if (obj.view.tag == page + SUBVIEW_TAG) {
@@ -223,6 +249,7 @@
 	{
 		_bgScrollView = [[UIScrollView alloc]init];
 		_bgScrollView.pagingEnabled = YES;
+	   [_bgScrollView setBounces:NO];
 		_bgScrollView.showsHorizontalScrollIndicator = NO;
 		_bgScrollView.showsVerticalScrollIndicator = NO;
 	}

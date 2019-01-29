@@ -6,11 +6,11 @@
 //  Copyright © 2019 LenSky. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseSubViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SubTableViewController : UIViewController
+@interface SubTableViewController : BaseSubViewController
 
 @end
 
