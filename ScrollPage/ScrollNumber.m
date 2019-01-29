@@ -9,13 +9,16 @@
 #import "ScrollNumber.h"
 #import "UIFont+textFont.h"
 
+
+#define NUMCOUNT 10 //支持的数组的最大位数
+
 @implementation ScrollNumber
 //文字滚动
 -(instancetype)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
 	if (self) {
-		for (int i = 0; i< 8; i++) {
+		for (int i = 0; i< NUMCOUNT; i++) {
 			ScrollNumItem *itemView = [[ScrollNumItem alloc]init];
 			itemView.layer.borderWidth = 0.5f;
 			itemView.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -32,7 +35,7 @@
 	CGFloat width = CGRectGetWidth(self.bounds);
 	CGFloat height = CGRectGetHeight(self.bounds);
 	for (ScrollNumItem *item in self.subviews) {
-		item.frame = CGRectMake((item.tag -100) * width/8.0f, 0, width/8.0f, height);
+		item.frame = CGRectMake((item.tag -100) * width/NUMCOUNT, 0, width/NUMCOUNT, height);
 	}
 }
 
@@ -42,14 +45,14 @@
 	NSString *str = [NSString stringWithFormat:@"%ld",(long)_number];
 	NSInteger  lastNum = 0;
 	NSMutableArray *array = [NSMutableArray array];
-	for (int i = 0; i< 8; i++) {
-		if (i<(8-str.length)) {
+	for (int i = 0; i< NUMCOUNT; i++) {
+		if (i<(NUMCOUNT-str.length)) {
 			[array addObject:@(0)];
 			lastNum = 0;
-			_number = _number - lastNum*pow(10, 7-i);
+			_number = _number - lastNum*pow(10, (NUMCOUNT -1)-i);
 		}else{
-			 lastNum = _number /pow(10,(7-i));
-			_number =_number - lastNum * pow(10, 7-i);
+			 lastNum = _number /pow(10,((NUMCOUNT -1)-i));
+			_number =_number - lastNum * pow(10, (NUMCOUNT -1)-i);
 			[array addObject:@(lastNum)];
 		}
 	}

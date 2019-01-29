@@ -105,12 +105,12 @@
 	[self.view addSubview:backBtn];
 
 	UILabel *titleLable = [UILabel new];
+
 	titleLable.textColor = [UIColor blackColor];
 	titleLable.text = @"时光不休，武侠不散";
 	[self.view addSubview:titleLable];
 	titleLable.frame = CGRectMake(0, topY, CGRectGetWidth(self.view.frame), 40.0f);
 	titleLable.textAlignment = NSTextAlignmentCenter;
-	
 
 }
 
@@ -118,7 +118,6 @@
 {
 	[self.navigationController popViewControllerAnimated:YES];
 }
-
 
 -(NSInteger)numerOfPageWithPageViewController:(BasePageViewController *)pageVc
 {

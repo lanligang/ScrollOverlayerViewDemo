@@ -27,15 +27,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.navigationItem.title = @"距离放假还有:";
-
+	self.navigationItem.title = @"细思及恐之距离2080年还有";
 	UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 	[btn setTitle:@"强迫症治愈系" forState:UIControlStateNormal];
 	btn.backgroundColor = [UIColor orangeColor];
 	[btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	[btn addTarget:self action:@selector(onClicked:) forControlEvents:UIControlEventTouchUpInside];
 	btn.bounds = CGRectMake(0, 0, 300, 60);
-	btn.center = self.view.center;
+	btn.center = CGPointMake(self.view.center.x, self.view.center.y - 80.0f);
 	[self.view addSubview:btn];
 
 	ScrollNumber *numView = [[ScrollNumber alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds) - 80, 40)];
@@ -48,7 +47,7 @@
 	numView.center = CGPointMake(CGRectGetWidth(self.view.frame)/2.0f, 180);
 	[self.view addSubview:numView];
 
-	NSString *str = @"2019-02-01 15:00:00";
+	NSString *str = @"2080-01-01 00:00:00";
 	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	[formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
@@ -62,6 +61,16 @@
 	s.frame = CGRectMake(CGRectGetMaxX(numView.frame), CGRectGetMinY(numView.frame), 20, CGRectGetHeight(numView.frame));
 	NSTimer *timer =[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(ontimer) userInfo:nil repeats:YES];
 	[timer fire];
+
+	UITextView *tfV = [UITextView new];
+	tfV.textColor = [UIColor redColor];
+	tfV.font = [UIFont systemFontOfSize:20.0f];
+	tfV.text = @"亲爱的朋友:\n  假设我能活到2080年那么我至少活了90年,你看到的时间就只要那么一点这是你能看到的流逝平时不觉得什么,但是真正显示出来的时候\n却又觉得可怕！\n珍惜当下的每一分每一秒吧！";
+	[self.view addSubview:tfV];
+	tfV.frame = CGRectMake(10, CGRectGetMaxY(btn.frame) + 10, CGRectGetWidth(self.view.frame) - 20, 300.0f);
+	tfV.editable = NO;
+	[self.view addSubview:tfV];
+
 }
 -(void)ontimer
 {
