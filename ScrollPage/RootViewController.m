@@ -19,6 +19,12 @@
 
 @implementation RootViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.navigationItem.title = @"距离放假还有:";
@@ -43,7 +49,7 @@
 	[self.view addSubview:numView];
 
 	NSString *str = @"2019-02-01 15:00:00";
-
+	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	[formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
 	NSDate *beginDate=[formatter dateFromString:str];

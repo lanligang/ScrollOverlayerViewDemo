@@ -23,6 +23,7 @@
 	self.scrollHeaderView = headerV;
 	UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
 	flowLayout.itemSize = CGSizeMake(80, 80);
+	flowLayout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
 	UICollectionView *collectionView =[[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
 	collectionView.backgroundColor = [UIColor whiteColor];
 	[collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];

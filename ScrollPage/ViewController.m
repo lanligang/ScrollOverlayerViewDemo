@@ -18,7 +18,7 @@
 	UIView *_pageView;
 	UIView *_lineView;
 	BasePageViewController *_pageVc;
-	UIView *_topNavView;
+	UIVisualEffectView *_topNavView;
 }
 @end
 
@@ -89,13 +89,37 @@
 	bottomLineV.frame = CGRectMake(0, 39.0f, CGRectGetWidth(self.view.frame), 1);
 	[_pageView addSubview:bottomLineV];
 
-
-	_topNavView = [UIView new];
+	UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+	UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+	_topNavView = effectView;
 	_topNavView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), topHeight);
 	_topNavView.backgroundColor  = [[UIColor redColor]colorWithAlphaComponent:0];
+
+	UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+	CGFloat topY = CGRectGetMaxY([UIApplication sharedApplication].statusBarFrame);
+	backBtn.frame = CGRectMake(10.0f, topY, 40, 40);
+	[backBtn setImage:[UIImage imageNamed:@"activity_back_icon"] forState:UIControlStateNormal];
+	[backBtn addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+
 	[self.view addSubview:_topNavView];
+	[self.view addSubview:backBtn];
+
+	UILabel *titleLable = [UILabel new];
+	titleLable.textColor = [UIColor blackColor];
+	titleLable.text = @"时光不休，武侠不散";
+	[self.view addSubview:titleLable];
+	titleLable.frame = CGRectMake(0, topY, CGRectGetWidth(self.view.frame), 40.0f);
+	titleLable.textAlignment = NSTextAlignmentCenter;
+	
 
 }
+
+-(void)backAction:(id)sender
+{
+	[self.navigationController popViewControllerAnimated:YES];
+}
+
+
 -(NSInteger)numerOfPageWithPageViewController:(BasePageViewController *)pageVc
 {
 	return 4;
@@ -133,7 +157,8 @@
 {
 	CGFloat alpa = offSet.y/140.0f;
 	alpa = MAX(0, alpa);
-	_topNavView.backgroundColor  = [[UIColor redColor]colorWithAlphaComponent:alpa];
+	alpa = MIN(0.5, alpa);
+	_topNavView.backgroundColor  = [[UIColor whiteColor]colorWithAlphaComponent:alpa];
 }
 
 -(void)clickedAction:(UIButton *)btn

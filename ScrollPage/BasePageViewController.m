@@ -233,13 +233,13 @@
 {
 	//移除监听
 	[_bgScrollView removeObserver:self forKeyPath:@"contentOffset"];
-	__weak typeof(self)ws = self;
-	[self.childViewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-		UIScrollView *scrollView =  [ws foundScrollViewWithViewController:obj];
+
+	for (UIViewController *vc  in self.childViewControllers) {
+		UIScrollView *scrollView =  [self foundScrollViewWithViewController:vc];
 		if (scrollView) {
-			[scrollView removeObserver:ws forKeyPath:@"contentOffset"];
+			[scrollView removeObserver:self forKeyPath:@"contentOffset"];
 		}
-	}];
+	}
 }
 
 //lazy load

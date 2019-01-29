@@ -53,7 +53,7 @@
 			UICollectionViewLayout *layout =colllectionView.collectionViewLayout;
 			if ([layout isKindOfClass:[UICollectionViewFlowLayout class]]) {
 				UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)layout;
-				flowLayout.sectionInset = UIEdgeInsetsMake(CGRectGetHeight(scrollHeaderView.frame), flowLayout.sectionInset.left,  flowLayout.sectionInset.bottom,  flowLayout.sectionInset.right);
+				flowLayout.sectionInset = UIEdgeInsetsMake(CGRectGetHeight(scrollHeaderView.frame) + flowLayout.sectionInset.top, flowLayout.sectionInset.left,  flowLayout.sectionInset.bottom,  flowLayout.sectionInset.right);
 				[colllectionView addSubview:_scrollHeaderView];
 			}
 		}
@@ -72,7 +72,7 @@
 			UICollectionViewLayout *layout =colllectionView.collectionViewLayout;
 			if ([layout isKindOfClass:[UICollectionViewFlowLayout class]]) {
 				UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)layout;
-				flowLayout.sectionInset = UIEdgeInsetsMake(CGRectGetHeight(_scrollHeaderView.frame), flowLayout.sectionInset.left,  flowLayout.sectionInset.bottom,  flowLayout.sectionInset.right);
+				flowLayout.sectionInset = UIEdgeInsetsMake(CGRectGetHeight(_scrollHeaderView.frame) + flowLayout.sectionInset.top, flowLayout.sectionInset.left,  flowLayout.sectionInset.bottom,  flowLayout.sectionInset.right);
 				[colllectionView addSubview:_scrollHeaderView];
 			}
 		}
