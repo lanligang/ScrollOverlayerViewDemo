@@ -88,6 +88,11 @@
 		8F7CB82221FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
 		8F7CB82321FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
 		8F7CB82621FEE56100E6FD83 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB82521FEE56100E6FD83 /* RootViewController.m */; };
+		8FDDD9E1220024C40063A4E9 /* ScrollNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E0220024C40063A4E9 /* ScrollNumber.m */; };
+		8FDDD9E3220047FE0063A4E9 /* UnidreamLED.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E2220047FE0063A4E9 /* UnidreamLED.ttf */; };
+		8FDDD9E62200484A0063A4E9 /* UIFont+textFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */; };
+		8FDDD9E72200484A0063A4E9 /* UIFont+textFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */; };
+		8FDDD9E82200484A0063A4E9 /* UIFont+textFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */; };
 		8FFC8B2A21FFEA7D00700558 /* BaseSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */; };
 		8FFC8B2D21FFF42000700558 /* SubCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8B2C21FFF42000700558 /* SubCollectionViewController.m */; };
 		E18C14466DBF90582421A4A7 /* libPods-ScrollPage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 499A1A88EF44D6AE413DD2D5 /* libPods-ScrollPage.a */; };
@@ -183,6 +188,11 @@
 		8F7CB7D521FE916B00E6FD83 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		8F7CB82421FEE56100E6FD83 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		8F7CB82521FEE56100E6FD83 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		8FDDD9DF220024C40063A4E9 /* ScrollNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollNumber.h; sourceTree = "<group>"; };
+		8FDDD9E0220024C40063A4E9 /* ScrollNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollNumber.m; sourceTree = "<group>"; };
+		8FDDD9E2220047FE0063A4E9 /* UnidreamLED.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UnidreamLED.ttf; sourceTree = "<group>"; };
+		8FDDD9E4220048490063A4E9 /* UIFont+textFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+textFont.h"; sourceTree = "<group>"; };
+		8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+textFont.m"; sourceTree = "<group>"; };
 		8FFC8B2821FFEA7D00700558 /* BaseSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseSubViewController.h; sourceTree = "<group>"; };
 		8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseSubViewController.m; sourceTree = "<group>"; };
 		8FFC8B2B21FFF42000700558 /* SubCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubCollectionViewController.h; sourceTree = "<group>"; };
@@ -248,6 +258,8 @@
 				8F7CB82521FEE56100E6FD83 /* RootViewController.m */,
 				4C2B7B2921FD9D5700909B55 /* ViewController.h */,
 				4C2B7B2A21FD9D5700909B55 /* ViewController.m */,
+				8FDDD9DF220024C40063A4E9 /* ScrollNumber.h */,
+				8FDDD9E0220024C40063A4E9 /* ScrollNumber.m */,
 				4C2B7B5821FD9D9600909B55 /* BasePageViewController.h */,
 				4C2B7B5921FD9D9600909B55 /* BasePageViewController.m */,
 				4C2B7B5E21FE0BF800909B55 /* HeaderView.h */,
@@ -258,6 +270,9 @@
 				8FFC8B2C21FFF42000700558 /* SubCollectionViewController.m */,
 				8FFC8B2821FFEA7D00700558 /* BaseSubViewController.h */,
 				8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */,
+				8FDDD9E4220048490063A4E9 /* UIFont+textFont.h */,
+				8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */,
+				8FDDD9E2220047FE0063A4E9 /* UnidreamLED.ttf */,
 				8F7CB79D21FE916A00E6FD83 /* ThirdPart */,
 				4C2B7B2C21FD9D5700909B55 /* Main.storyboard */,
 				4C2B7B2F21FD9D6900909B55 /* Assets.xcassets */,
@@ -496,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2B7B3321FD9D6900909B55 /* LaunchScreen.storyboard in Resources */,
+				8FDDD9E3220047FE0063A4E9 /* UnidreamLED.ttf in Resources */,
 				4C2B7B3021FD9D6900909B55 /* Assets.xcassets in Resources */,
 				4C2B7B2E21FD9D5700909B55 /* Main.storyboard in Resources */,
 			);
@@ -580,6 +596,7 @@
 				8F7CB80021FE916B00E6FD83 /* UIImageView+HighlightedWebCache.m in Sources */,
 				8F7CB81521FE916B00E6FD83 /* SDWebImageDownloaderOperation.m in Sources */,
 				8F7CB7F721FE916B00E6FD83 /* MKAnnotationView+WebCache.m in Sources */,
+				8FDDD9E1220024C40063A4E9 /* ScrollNumber.m in Sources */,
 				8F7CB81821FE916B00E6FD83 /* NSData+ImageContentType.m in Sources */,
 				8F7CB7D621FE916B00E6FD83 /* SDCycleScrollView.m in Sources */,
 				8F7CB80321FE916B00E6FD83 /* SDWebImageDownloader.m in Sources */,
@@ -587,6 +604,7 @@
 				8F7CB7FA21FE916B00E6FD83 /* SDWebImageManager.m in Sources */,
 				4C2B7B6021FE0BF800909B55 /* HeaderView.m in Sources */,
 				4C2B7B3621FD9D6900909B55 /* main.m in Sources */,
+				8FDDD9E62200484A0063A4E9 /* UIFont+textFont.m in Sources */,
 				4C2B7B5A21FD9D9600909B55 /* BasePageViewController.m in Sources */,
 				8F7CB80F21FE916B00E6FD83 /* SDWebImagePrefetcher.m in Sources */,
 				8FFC8B2D21FFF42000700558 /* SubCollectionViewController.m in Sources */,
@@ -626,6 +644,7 @@
 				8F7CB7DA21FE916B00E6FD83 /* UIView+SDExtension.m in Sources */,
 				8F7CB80A21FE916B00E6FD83 /* UIImage+MultiFormat.m in Sources */,
 				8F7CB81921FE916B00E6FD83 /* NSData+ImageContentType.m in Sources */,
+				8FDDD9E72200484A0063A4E9 /* UIFont+textFont.m in Sources */,
 				8F7CB7D721FE916B00E6FD83 /* SDCycleScrollView.m in Sources */,
 				8F7CB7DD21FE916B00E6FD83 /* SDCollectionViewCell.m in Sources */,
 				8F7CB80721FE916B00E6FD83 /* UIImage+GIF.m in Sources */,
@@ -657,6 +676,7 @@
 				8F7CB7DB21FE916B00E6FD83 /* UIView+SDExtension.m in Sources */,
 				8F7CB80B21FE916B00E6FD83 /* UIImage+MultiFormat.m in Sources */,
 				8F7CB81A21FE916B00E6FD83 /* NSData+ImageContentType.m in Sources */,
+				8FDDD9E82200484A0063A4E9 /* UIFont+textFont.m in Sources */,
 				8F7CB7D821FE916B00E6FD83 /* SDCycleScrollView.m in Sources */,
 				8F7CB7DE21FE916B00E6FD83 /* SDCollectionViewCell.m in Sources */,
 				8F7CB80821FE916B00E6FD83 /* UIImage+GIF.m in Sources */,

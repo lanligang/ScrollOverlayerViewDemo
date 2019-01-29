@@ -22,7 +22,7 @@
 	headerV.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 300);
 	self.scrollHeaderView = headerV;
 	UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-	flowLayout.itemSize = CGSizeMake(60, 60);
+	flowLayout.itemSize = CGSizeMake(80, 80);
 	UICollectionView *collectionView =[[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
 	collectionView.backgroundColor = [UIColor whiteColor];
 	[collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
@@ -64,7 +64,7 @@
 #pragma mark 随机色 测试使用
 -(UIColor *)randomColor
 {
-   int r =	5 + arc4random() %250;
+    int r =	5 + arc4random() %250;
 	int g = 5 + arc4random() %250;
 	int b = 5 + arc4random() %250;
 	return  [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1];
