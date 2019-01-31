@@ -1,10 +1,9 @@
-//
-//  BaseSubViewController.m
-//  ScrollPage
-//
-//  Created by ios2 on 2019/1/29.
-//  Copyright © 2019 LenSky. All rights reserved.
-//
+/*_       _____   __   _   _____   _   _   __    __
+ | |     | ____| |  \ | | /  ___/ | | / /  \ \  / /
+ | |     | |__   |   \| | | |___  | |/ /    \ \/ /
+ | |     |  __|  | |\   | \___  \ | |\ \     \  /
+ | |___  | |___  | | \  |  ___| | | | \ \    / /
+ |_____| |_____| |_|  \_| /_____/ |_|  \_\  /_/     */
 
 #import "BaseSubViewController.h"
 #import <MJRefresh.h>

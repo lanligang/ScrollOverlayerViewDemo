@@ -1,10 +1,9 @@
-//
-//  BasePageViewController.m
-//  ScrollPage
-//
-//  Created by mc on 2019/1/27.
-//  Copyright © 2019 LenSky. All rights reserved.
-//
+/*_       _____   __   _   _____   _   _   __    __
+ | |     | ____| |  \ | | /  ___/ | | / /  \ \  / /
+ | |     | |__   |   \| | | |___  | |/ /    \ \/ /
+ | |     |  __|  | |\   | \___  \ | |\ \     \  /
+ | |___  | |___  | | \  |  ___| | | | \ \    / /
+ |_____| |_____| |_|  \_| /_____/ |_|  \_\  /_/     */
 
 #import "BasePageViewController.h"
 
