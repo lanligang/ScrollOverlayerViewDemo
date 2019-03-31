@@ -18,6 +18,12 @@
 		4C2B7B5A21FD9D9600909B55 /* BasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B7B5921FD9D9600909B55 /* BasePageViewController.m */; };
 		4C2B7B5D21FDF3CF00909B55 /* SubTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B7B5C21FDF3CF00909B55 /* SubTableViewController.m */; };
 		4C2B7B6021FE0BF800909B55 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B7B5F21FE0BF800909B55 /* HeaderView.m */; };
+		8F18EF9922423CE000CE366C /* CustomCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F18EF9822423CE000CE366C /* CustomCircle.m */; };
+		8F18EF9C22423EA000CE366C /* RefreshCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F18EF9B22423EA000CE366C /* RefreshCircleView.m */; };
+		8F18EFA02242453E00CE366C /* HeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F18EF9F2242453E00CE366C /* HeaderViewController.m */; };
+		8F5DC461223A7CC7006A6966 /* BgScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5DC460223A7CC7006A6966 /* BgScrollView.m */; };
+		8F76B0D82249C1DD006FEFF1 /* TextFiledTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F76B0D62249C1DD006FEFF1 /* TextFiledTableViewCell.m */; };
+		8F76B0D92249C1DD006FEFF1 /* TextFiledTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F76B0D72249C1DD006FEFF1 /* TextFiledTableViewCell.xib */; };
 		8F7CB7D621FE916B00E6FD83 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7A221FE916A00E6FD83 /* SDCycleScrollView.m */; };
 		8F7CB7D721FE916B00E6FD83 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7A221FE916A00E6FD83 /* SDCycleScrollView.m */; };
 		8F7CB7D821FE916B00E6FD83 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7A221FE916A00E6FD83 /* SDCycleScrollView.m */; };
@@ -88,11 +94,27 @@
 		8F7CB82221FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
 		8F7CB82321FE916B00E6FD83 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB7D421FE916B00E6FD83 /* UIButton+WebCache.m */; };
 		8F7CB82621FEE56100E6FD83 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CB82521FEE56100E6FD83 /* RootViewController.m */; };
+		8FA46AFD223D295D00C864EF /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA46AFB223D295C00C864EF /* EmojiView.m */; };
+		8FA46AFE223D295D00C864EF /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA46AFB223D295C00C864EF /* EmojiView.m */; };
+		8FA46AFF223D295D00C864EF /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA46AFB223D295C00C864EF /* EmojiView.m */; };
+		8FAEFD1A2248C35700936930 /* TextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAEFD182248C35700936930 /* TextViewTableViewCell.m */; };
+		8FAEFD1B2248C35700936930 /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAEFD192248C35700936930 /* TextViewTableViewCell.xib */; };
+		8FB101E9224C5701007AFF22 /* LGCustomNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB101E8224C5701007AFF22 /* LGCustomNavBar.m */; };
+		8FB101EF224C7007007AFF22 /* UIScrollView+PopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB101EC224C7007007AFF22 /* UIScrollView+PopScrollView.m */; };
+		8FB101F0224C7007007AFF22 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB101ED224C7007007AFF22 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		8FB37E0522432C8900C83356 /* CircleFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37E0422432C8900C83356 /* CircleFooter.m */; };
+		8FB37E0B22438FC600C83356 /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37E0A22438FC600C83356 /* AddressBookManager.m */; };
+		8FB37E0F2243B60E00C83356 /* BMChineseSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37E0E2243B60E00C83356 /* BMChineseSort.m */; };
+		8FC3F71B2249C9A900DFF99D /* TextFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3F71A2249C9A900DFF99D /* TextFileModel.m */; };
+		8FC3F71E224A665500DFF99D /* NSObject+LgObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3F71C224A665400DFF99D /* NSObject+LgObserver.m */; };
+		8FC3F720224A693300DFF99D /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC3F71F224A693300DFF99D /* Contacts.framework */; };
+		8FD7CFDA2244B58A00CB3452 /* SearchResoultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7CFD92244B58A00CB3452 /* SearchResoultViewController.m */; };
 		8FDDD9E1220024C40063A4E9 /* ScrollNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E0220024C40063A4E9 /* ScrollNumber.m */; };
 		8FDDD9E3220047FE0063A4E9 /* UnidreamLED.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E2220047FE0063A4E9 /* UnidreamLED.ttf */; };
 		8FDDD9E62200484A0063A4E9 /* UIFont+textFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */; };
 		8FDDD9E72200484A0063A4E9 /* UIFont+textFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */; };
 		8FDDD9E82200484A0063A4E9 /* UIFont+textFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */; };
+		8FEF59B12248777E004E5F78 /* AddressBookAddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEF59B02248777E004E5F78 /* AddressBookAddUserViewController.m */; };
 		8FFC8B2A21FFEA7D00700558 /* BaseSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */; };
 		8FFC8B2D21FFF42000700558 /* SubCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8B2C21FFF42000700558 /* SubCollectionViewController.m */; };
 		E18C14466DBF90582421A4A7 /* libPods-ScrollPage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 499A1A88EF44D6AE413DD2D5 /* libPods-ScrollPage.a */; };
@@ -139,6 +161,17 @@
 		4C2B7B5C21FDF3CF00909B55 /* SubTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTableViewController.m; sourceTree = "<group>"; };
 		4C2B7B5E21FE0BF800909B55 /* HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		4C2B7B5F21FE0BF800909B55 /* HeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		8F18EF9722423CE000CE366C /* CustomCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCircle.h; sourceTree = "<group>"; };
+		8F18EF9822423CE000CE366C /* CustomCircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCircle.m; sourceTree = "<group>"; };
+		8F18EF9A22423EA000CE366C /* RefreshCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshCircleView.h; sourceTree = "<group>"; };
+		8F18EF9B22423EA000CE366C /* RefreshCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshCircleView.m; sourceTree = "<group>"; };
+		8F18EF9E2242453E00CE366C /* HeaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderViewController.h; sourceTree = "<group>"; };
+		8F18EF9F2242453E00CE366C /* HeaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderViewController.m; sourceTree = "<group>"; };
+		8F5DC45F223A7CC7006A6966 /* BgScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BgScrollView.h; sourceTree = "<group>"; };
+		8F5DC460223A7CC7006A6966 /* BgScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BgScrollView.m; sourceTree = "<group>"; };
+		8F76B0D52249C1DD006FEFF1 /* TextFiledTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledTableViewCell.h; sourceTree = "<group>"; };
+		8F76B0D62249C1DD006FEFF1 /* TextFiledTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFiledTableViewCell.m; sourceTree = "<group>"; };
+		8F76B0D72249C1DD006FEFF1 /* TextFiledTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFiledTableViewCell.xib; sourceTree = "<group>"; };
 		8F7CB79F21FE916A00E6FD83 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		8F7CB7A021FE916A00E6FD83 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
 		8F7CB7A121FE916A00E6FD83 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
@@ -188,11 +221,37 @@
 		8F7CB7D521FE916B00E6FD83 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		8F7CB82421FEE56100E6FD83 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		8F7CB82521FEE56100E6FD83 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		8FA46AFB223D295C00C864EF /* EmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiView.m; sourceTree = "<group>"; };
+		8FA46AFC223D295D00C864EF /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
+		8FAEFD172248C35700936930 /* TextViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewTableViewCell.h; sourceTree = "<group>"; };
+		8FAEFD182248C35700936930 /* TextViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewTableViewCell.m; sourceTree = "<group>"; };
+		8FAEFD192248C35700936930 /* TextViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewTableViewCell.xib; sourceTree = "<group>"; };
+		8FB101E7224C5701007AFF22 /* LGCustomNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGCustomNavBar.h; sourceTree = "<group>"; };
+		8FB101E8224C5701007AFF22 /* LGCustomNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGCustomNavBar.m; sourceTree = "<group>"; };
+		8FB101EB224C7007007AFF22 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		8FB101EC224C7007007AFF22 /* UIScrollView+PopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PopScrollView.m"; sourceTree = "<group>"; };
+		8FB101ED224C7007007AFF22 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		8FB101EE224C7007007AFF22 /* UIScrollView+PopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PopScrollView.h"; sourceTree = "<group>"; };
+		8FB37E0322432C8900C83356 /* CircleFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleFooter.h; sourceTree = "<group>"; };
+		8FB37E0422432C8900C83356 /* CircleFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleFooter.m; sourceTree = "<group>"; };
+		8FB37E0922438FC600C83356 /* AddressBookManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
+		8FB37E0A22438FC600C83356 /* AddressBookManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
+		8FB37E0D2243B60E00C83356 /* BMChineseSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMChineseSort.h; sourceTree = "<group>"; };
+		8FB37E0E2243B60E00C83356 /* BMChineseSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMChineseSort.m; sourceTree = "<group>"; };
+		8FC3F7192249C9A900DFF99D /* TextFileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFileModel.h; sourceTree = "<group>"; };
+		8FC3F71A2249C9A900DFF99D /* TextFileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFileModel.m; sourceTree = "<group>"; };
+		8FC3F71C224A665400DFF99D /* NSObject+LgObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LgObserver.m"; sourceTree = "<group>"; };
+		8FC3F71D224A665500DFF99D /* NSObject+LgObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LgObserver.h"; sourceTree = "<group>"; };
+		8FC3F71F224A693300DFF99D /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		8FD7CFD82244B58A00CB3452 /* SearchResoultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResoultViewController.h; sourceTree = "<group>"; };
+		8FD7CFD92244B58A00CB3452 /* SearchResoultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResoultViewController.m; sourceTree = "<group>"; };
 		8FDDD9DF220024C40063A4E9 /* ScrollNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollNumber.h; sourceTree = "<group>"; };
 		8FDDD9E0220024C40063A4E9 /* ScrollNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollNumber.m; sourceTree = "<group>"; };
 		8FDDD9E2220047FE0063A4E9 /* UnidreamLED.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UnidreamLED.ttf; sourceTree = "<group>"; };
 		8FDDD9E4220048490063A4E9 /* UIFont+textFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+textFont.h"; sourceTree = "<group>"; };
 		8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+textFont.m"; sourceTree = "<group>"; };
+		8FEF59AF2248777E004E5F78 /* AddressBookAddUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookAddUserViewController.h; sourceTree = "<group>"; };
+		8FEF59B02248777E004E5F78 /* AddressBookAddUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookAddUserViewController.m; sourceTree = "<group>"; };
 		8FFC8B2821FFEA7D00700558 /* BaseSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseSubViewController.h; sourceTree = "<group>"; };
 		8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseSubViewController.m; sourceTree = "<group>"; };
 		8FFC8B2B21FFF42000700558 /* SubCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubCollectionViewController.h; sourceTree = "<group>"; };
@@ -206,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC3F720224A693300DFF99D /* Contacts.framework in Frameworks */,
 				E18C14466DBF90582421A4A7 /* libPods-ScrollPage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +312,8 @@
 		4C2B7B2521FD9D5700909B55 /* ScrollPage */ = {
 			isa = PBXGroup;
 			children = (
+				8FA46AFC223D295D00C864EF /* EmojiView.h */,
+				8FA46AFB223D295C00C864EF /* EmojiView.m */,
 				4C2B7B2621FD9D5700909B55 /* AppDelegate.h */,
 				4C2B7B2721FD9D5700909B55 /* AppDelegate.m */,
 				8F7CB82421FEE56100E6FD83 /* RootViewController.h */,
@@ -264,6 +326,8 @@
 				4C2B7B5921FD9D9600909B55 /* BasePageViewController.m */,
 				4C2B7B5E21FE0BF800909B55 /* HeaderView.h */,
 				4C2B7B5F21FE0BF800909B55 /* HeaderView.m */,
+				8F5DC45F223A7CC7006A6966 /* BgScrollView.h */,
+				8F5DC460223A7CC7006A6966 /* BgScrollView.m */,
 				4C2B7B5B21FDF3CF00909B55 /* SubTableViewController.h */,
 				4C2B7B5C21FDF3CF00909B55 /* SubTableViewController.m */,
 				8FFC8B2B21FFF42000700558 /* SubCollectionViewController.h */,
@@ -272,6 +336,11 @@
 				8FFC8B2921FFEA7D00700558 /* BaseSubViewController.m */,
 				8FDDD9E4220048490063A4E9 /* UIFont+textFont.h */,
 				8FDDD9E52200484A0063A4E9 /* UIFont+textFont.m */,
+				8FC3F71D224A665500DFF99D /* NSObject+LgObserver.h */,
+				8FC3F71C224A665400DFF99D /* NSObject+LgObserver.m */,
+				8FB101E7224C5701007AFF22 /* LGCustomNavBar.h */,
+				8FB101E8224C5701007AFF22 /* LGCustomNavBar.m */,
+				8F18EF9D2242451800CE366C /* TestRefreshHeaderVc */,
 				8FDDD9E2220047FE0063A4E9 /* UnidreamLED.ttf */,
 				8F7CB79D21FE916A00E6FD83 /* ThirdPart */,
 				4C2B7B2C21FD9D5700909B55 /* Main.storyboard */,
@@ -313,16 +382,45 @@
 		8B8720FA819D0AB831EBE313 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8FC3F71F224A693300DFF99D /* Contacts.framework */,
 				499A1A88EF44D6AE413DD2D5 /* libPods-ScrollPage.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F18EF9D2242451800CE366C /* TestRefreshHeaderVc */ = {
+			isa = PBXGroup;
+			children = (
+				8F18EF9E2242453E00CE366C /* HeaderViewController.h */,
+				8F18EF9F2242453E00CE366C /* HeaderViewController.m */,
+				8FD7CFD82244B58A00CB3452 /* SearchResoultViewController.h */,
+				8FD7CFD92244B58A00CB3452 /* SearchResoultViewController.m */,
+				8FEF59AF2248777E004E5F78 /* AddressBookAddUserViewController.h */,
+				8FEF59B02248777E004E5F78 /* AddressBookAddUserViewController.m */,
+				8FC3F7182249C97300DFF99D /* Model */,
+				8F76B0D52249C1DD006FEFF1 /* TextFiledTableViewCell.h */,
+				8F76B0D62249C1DD006FEFF1 /* TextFiledTableViewCell.m */,
+				8F76B0D72249C1DD006FEFF1 /* TextFiledTableViewCell.xib */,
+				8FAEFD172248C35700936930 /* TextViewTableViewCell.h */,
+				8FAEFD182248C35700936930 /* TextViewTableViewCell.m */,
+				8FAEFD192248C35700936930 /* TextViewTableViewCell.xib */,
+				8FB37E0C2243B5EC00C83356 /* AddressBook */,
+			);
+			path = TestRefreshHeaderVc;
+			sourceTree = "<group>";
+		};
 		8F7CB79D21FE916A00E6FD83 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				8FB101EA224C7007007AFF22 /* FDFullscreenPopGesture */,
 				8F7CB79E21FE916A00E6FD83 /* SDCycleScrollView */,
 				8F7CB7AE21FE916A00E6FD83 /* SDWebImage */,
+				8F18EF9722423CE000CE366C /* CustomCircle.h */,
+				8F18EF9822423CE000CE366C /* CustomCircle.m */,
+				8FB37E0322432C8900C83356 /* CircleFooter.h */,
+				8FB37E0422432C8900C83356 /* CircleFooter.m */,
+				8F18EF9A22423EA000CE366C /* RefreshCircleView.h */,
+				8F18EF9B22423EA000CE366C /* RefreshCircleView.m */,
 			);
 			path = ThirdPart;
 			sourceTree = "<group>";
@@ -402,6 +500,37 @@
 				8F7CB7D521FE916B00E6FD83 /* UIImage+GIF.h */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		8FB101EA224C7007007AFF22 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				8FB101EB224C7007007AFF22 /* UINavigationController+FDFullscreenPopGesture.h */,
+				8FB101EC224C7007007AFF22 /* UIScrollView+PopScrollView.m */,
+				8FB101ED224C7007007AFF22 /* UINavigationController+FDFullscreenPopGesture.m */,
+				8FB101EE224C7007007AFF22 /* UIScrollView+PopScrollView.h */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		8FB37E0C2243B5EC00C83356 /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				8FB37E0922438FC600C83356 /* AddressBookManager.h */,
+				8FB37E0A22438FC600C83356 /* AddressBookManager.m */,
+				8FB37E0D2243B60E00C83356 /* BMChineseSort.h */,
+				8FB37E0E2243B60E00C83356 /* BMChineseSort.m */,
+			);
+			path = AddressBook;
+			sourceTree = "<group>";
+		};
+		8FC3F7182249C97300DFF99D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FC3F7192249C9A900DFF99D /* TextFileModel.h */,
+				8FC3F71A2249C9A900DFF99D /* TextFileModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,9 +640,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2B7B3321FD9D6900909B55 /* LaunchScreen.storyboard in Resources */,
+				8FAEFD1B2248C35700936930 /* TextViewTableViewCell.xib in Resources */,
 				8FDDD9E3220047FE0063A4E9 /* UnidreamLED.ttf in Resources */,
 				4C2B7B3021FD9D6900909B55 /* Assets.xcassets in Resources */,
 				4C2B7B2E21FD9D5700909B55 /* Main.storyboard in Resources */,
+				8F76B0D92249C1DD006FEFF1 /* TextFiledTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,15 +723,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB101F0224C7007007AFF22 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				8FC3F71B2249C9A900DFF99D /* TextFileModel.m in Sources */,
 				4C2B7B2B21FD9D5700909B55 /* ViewController.m in Sources */,
 				8F7CB80021FE916B00E6FD83 /* UIImageView+HighlightedWebCache.m in Sources */,
 				8F7CB81521FE916B00E6FD83 /* SDWebImageDownloaderOperation.m in Sources */,
 				8F7CB7F721FE916B00E6FD83 /* MKAnnotationView+WebCache.m in Sources */,
 				8FDDD9E1220024C40063A4E9 /* ScrollNumber.m in Sources */,
 				8F7CB81821FE916B00E6FD83 /* NSData+ImageContentType.m in Sources */,
+				8FAEFD1A2248C35700936930 /* TextViewTableViewCell.m in Sources */,
 				8F7CB7D621FE916B00E6FD83 /* SDCycleScrollView.m in Sources */,
+				8FEF59B12248777E004E5F78 /* AddressBookAddUserViewController.m in Sources */,
 				8F7CB80321FE916B00E6FD83 /* SDWebImageDownloader.m in Sources */,
 				8F7CB82121FE916B00E6FD83 /* UIButton+WebCache.m in Sources */,
+				8FA46AFD223D295D00C864EF /* EmojiView.m in Sources */,
 				8F7CB7FA21FE916B00E6FD83 /* SDWebImageManager.m in Sources */,
 				4C2B7B6021FE0BF800909B55 /* HeaderView.m in Sources */,
 				4C2B7B3621FD9D6900909B55 /* main.m in Sources */,
@@ -609,6 +745,7 @@
 				8F7CB80F21FE916B00E6FD83 /* SDWebImagePrefetcher.m in Sources */,
 				8FFC8B2D21FFF42000700558 /* SubCollectionViewController.m in Sources */,
 				4C2B7B2821FD9D5700909B55 /* AppDelegate.m in Sources */,
+				8FD7CFDA2244B58A00CB3452 /* SearchResoultViewController.m in Sources */,
 				8F7CB82621FEE56100E6FD83 /* RootViewController.m in Sources */,
 				8F7CB80921FE916B00E6FD83 /* UIImage+MultiFormat.m in Sources */,
 				8F7CB7F421FE916B00E6FD83 /* UIImage+WebP.m in Sources */,
@@ -620,12 +757,23 @@
 				4C2B7B5D21FDF3CF00909B55 /* SubTableViewController.m in Sources */,
 				8F7CB7E521FE916B00E6FD83 /* TAAnimatedDotView.m in Sources */,
 				8F7CB7D921FE916B00E6FD83 /* UIView+SDExtension.m in Sources */,
+				8FB37E0F2243B60E00C83356 /* BMChineseSort.m in Sources */,
 				8F7CB80C21FE916B00E6FD83 /* SDWebImageCompat.m in Sources */,
+				8FC3F71E224A665500DFF99D /* NSObject+LgObserver.m in Sources */,
+				8FB37E0B22438FC600C83356 /* AddressBookManager.m in Sources */,
 				8F7CB7DC21FE916B00E6FD83 /* SDCollectionViewCell.m in Sources */,
+				8FB101E9224C5701007AFF22 /* LGCustomNavBar.m in Sources */,
+				8F18EFA02242453E00CE366C /* HeaderViewController.m in Sources */,
+				8F18EF9922423CE000CE366C /* CustomCircle.m in Sources */,
+				8F5DC461223A7CC7006A6966 /* BgScrollView.m in Sources */,
+				8FB37E0522432C8900C83356 /* CircleFooter.m in Sources */,
 				8F7CB7FD21FE916B00E6FD83 /* SDWebImageDecoder.m in Sources */,
 				8F7CB7DF21FE916B00E6FD83 /* TADotView.m in Sources */,
 				8F7CB81E21FE916B00E6FD83 /* UIView+WebCacheOperation.m in Sources */,
+				8F76B0D82249C1DD006FEFF1 /* TextFiledTableViewCell.m in Sources */,
+				8F18EF9C22423EA000CE366C /* RefreshCircleView.m in Sources */,
 				8F7CB81221FE916B00E6FD83 /* SDImageCache.m in Sources */,
+				8FB101EF224C7007007AFF22 /* UIScrollView+PopScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +788,7 @@
 				4C2B7B4021FD9D6900909B55 /* ScrollPageTests.m in Sources */,
 				8F7CB80421FE916B00E6FD83 /* SDWebImageDownloader.m in Sources */,
 				8F7CB7E921FE916B00E6FD83 /* TAAbstractDotView.m in Sources */,
+				8FA46AFE223D295D00C864EF /* EmojiView.m in Sources */,
 				8F7CB7E621FE916B00E6FD83 /* TAAnimatedDotView.m in Sources */,
 				8F7CB7DA21FE916B00E6FD83 /* UIView+SDExtension.m in Sources */,
 				8F7CB80A21FE916B00E6FD83 /* UIImage+MultiFormat.m in Sources */,
@@ -672,6 +821,7 @@
 				4C2B7B4B21FD9D6900909B55 /* ScrollPageUITests.m in Sources */,
 				8F7CB80521FE916B00E6FD83 /* SDWebImageDownloader.m in Sources */,
 				8F7CB7EA21FE916B00E6FD83 /* TAAbstractDotView.m in Sources */,
+				8FA46AFF223D295D00C864EF /* EmojiView.m in Sources */,
 				8F7CB7E721FE916B00E6FD83 /* TAAnimatedDotView.m in Sources */,
 				8F7CB7DB21FE916B00E6FD83 /* UIView+SDExtension.m in Sources */,
 				8F7CB80B21FE916B00E6FD83 /* UIImage+MultiFormat.m in Sources */,
@@ -845,16 +995,18 @@
 			baseConfigurationReference = C7E222C47DB523ED4617DE30 /* Pods-ScrollPage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SR2P5NBA9;
 				INFOPLIST_FILE = ScrollPage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = llg.ScrollPage;
+				PRODUCT_BUNDLE_IDENTIFIER = llg.ScrollPage11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -864,16 +1016,18 @@
 			baseConfigurationReference = EB75FDAF5A4E2EB04CAB9EC2 /* Pods-ScrollPage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SR2P5NBA9;
 				INFOPLIST_FILE = ScrollPage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = llg.ScrollPage;
+				PRODUCT_BUNDLE_IDENTIFIER = llg.ScrollPage11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -6,12 +6,12 @@
  |_____| |_____| |_|  \_| /_____/ |_|  \_\  /_/     */
 
 #import "BasePageViewController.h"
-
+#import "BgScrollView.h"
 #define SUBVIEW_TAG 1024
 
 @interface BasePageViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong)UIView *headerView;
-@property (nonatomic,strong)UIScrollView *bgScrollView;
+@property (nonatomic,strong)BgScrollView *bgScrollView;
 @property (nonatomic,weak)id <PageViewControllerDelegate>delegate;
 @property (nonatomic,assign)CGFloat headerMaxHeight;
 
@@ -178,19 +178,17 @@
 		return;
 	}
 	if ([keyPath isEqualToString:@"contentOffset"]) {
-
 		UIScrollView *scrollView = (UIScrollView *)object;
 		CGFloat offSetY = scrollView.contentOffset.y;
-		if (offSetY > self.headerMaxHeight) {
-			if (CGRectGetMinY(self.headerView.frame) != -self.headerMaxHeight) {
-				self.headerView.frame = CGRectMake(CGRectGetMinX(_headerView.frame), - self.headerMaxHeight, CGRectGetWidth(self.headerView.frame), CGRectGetHeight(self.headerView.frame));
+		if (offSetY >= self.headerMaxHeight) {
+			if (self.headerView.frame.origin.y != -self.headerMaxHeight) {
+				self.headerView.frame = CGRectMake(_headerView.frame.origin.x, - self.headerMaxHeight, CGRectGetWidth(self.headerView.frame), CGRectGetHeight(self.headerView.frame));
 			}
-
-		}else if (offSetY >= 0 && offSetY <= self.headerMaxHeight) {
-			self.headerView.frame = CGRectMake(CGRectGetMinX(_headerView.frame), - offSetY, CGRectGetWidth(self.headerView.frame),CGRectGetHeight(self.headerView.frame));
+		}else if (offSetY >= 0 && offSetY <(self.headerMaxHeight - 0.1)) {
+			self.headerView.frame = CGRectMake(_headerView.frame.origin.x, - offSetY, CGRectGetWidth(self.headerView.frame),CGRectGetHeight(self.headerView.frame));
 		}else if (offSetY < 0){
 			if (self.isShowTop) {
-				  self.headerView.frame = CGRectMake(CGRectGetMinX(_headerView.frame), -offSetY, CGRectGetWidth(self.headerView.frame),CGRectGetHeight(self.headerView.frame));
+				  self.headerView.frame = CGRectMake(_headerView.frame.origin.x, -offSetY, CGRectGetWidth(self.headerView.frame),CGRectGetHeight(self.headerView.frame));
 			}
 		}
 		//通过代理告知外部滚动结果
@@ -230,6 +228,7 @@
 
 -(void)dealloc
 {
+	NSLog(@"内存释放了");
 	//移除监听
 	[_bgScrollView removeObserver:self forKeyPath:@"contentOffset"];
 
@@ -239,14 +238,15 @@
 			[scrollView removeObserver:self forKeyPath:@"contentOffset"];
 		}
 	}
+	_bgScrollView = nil;
 }
 
 //lazy load
--(UIScrollView *)bgScrollView
+-(BgScrollView *)bgScrollView
 {
 	if (!_bgScrollView)
 	{
-		_bgScrollView = [[UIScrollView alloc]init];
+		_bgScrollView = [[BgScrollView alloc]init];
 		_bgScrollView.pagingEnabled = YES;
 	   [_bgScrollView setBounces:NO];
 		_bgScrollView.showsHorizontalScrollIndicator = NO;
@@ -254,6 +254,12 @@
 	}
 	return _bgScrollView;
 }
+-(UIScrollView *)containtScrollView
+{
+	__weak UIScrollView *scrollView = self.bgScrollView;
+	return scrollView;
+}
+
 
 
 @end

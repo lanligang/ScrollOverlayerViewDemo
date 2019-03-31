@@ -4,6 +4,8 @@ target ‘ScrollPage’ do
 	pod 'MLeaksFinder'
 	#下拉刷新
 	pod 'MJRefresh'
+	#分页器
+	pod 'JXCategoryView'
 
 end
 

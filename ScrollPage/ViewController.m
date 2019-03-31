@@ -12,13 +12,15 @@
 #import "HeaderView.h"
 #import "SDCycleScrollView.h"
 #import "SubCollectionViewController.h"
+#import <JXCategoryView/JXCategoryView.h>
 
-@interface ViewController ()<PageViewControllerDelegate>
+
+@interface ViewController ()<PageViewControllerDelegate,JXCategoryViewDelegate>
 {
 	UIView *_pageView;
-	UIView *_lineView;
 	BasePageViewController *_pageVc;
 	UIVisualEffectView *_topNavView;
+	JXCategoryTitleView *segmentedControl;
 }
 @end
 
@@ -26,10 +28,12 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	[self.navigationController setNavigationBarHidden:YES animated:animated];
+
 }
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(backAction:)];
+	self.navigationItem.leftBarButtonItem = backItem;
 	// =======================================
 	HeaderView *headerView = [HeaderView new];
 	UIView *pageView = [UIView new];
@@ -49,7 +53,7 @@
 
 	[self addChildViewController:pageVc];
 
-	pageVc.view.frame = self.view.bounds;
+	pageVc.view.frame = [UIScreen mainScreen].bounds;
 
 	[self.view addSubview:pageVc.view];
 	// =======================================
@@ -57,38 +61,24 @@
 	SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 300 - 40.0f) imageURLStringsGroup:@[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548669791927&di=e3c3c33b4df7b8af4cc717d61bf68c62&imgtype=0&src=http%3A%2F%2Fseopic.699pic.com%2Fphoto%2F50080%2F5511.jpg_wh1200.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548669791927&di=2fb9b372bd252a2570338855f67f193e&imgtype=0&src=http%3A%2F%2Fpic16.nipic.com%2F20110421%2F468957_140932500145_2.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548669791926&di=f5435bb841f8f815901efe795320a924&imgtype=0&src=http%3A%2F%2Fimg05.tooopen.com%2Fimages%2F20141121%2Fsy_75465683182.jpg"]];
 
 	[headerView addSubview:scrollView];
+//@[@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传",@"雪山飞狐"]
+//	FSSegmentTitleView *segmentBar = [[FSSegmentTitleView alloc]initWithFrame:CGRectMake(0,CGRectGetMaxY(scrollView.frame), CGRectGetWidth(self.view.bounds),40) titles:@[@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传",@"雪山飞狐",@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传",@"雪山飞狐"] delegate:self indicatorType:FSIndicatorTypeEqualTitle];
 
-	NSString *titles[] = {@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传",@"雪山飞狐"};
-
-	CGFloat width = CGRectGetWidth(self.view.frame)/4.0f;
-
-	for (int i = 0; i< 4; i++) {
-		UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-		btn.tag = 10+ i;
-		[_pageView addSubview:btn];
-		[btn setTitle:titles[i] forState:UIControlStateNormal];
-		[btn setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
-		[btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-		btn.frame = CGRectMake(i*width, 0, width, 40.0f);
-		[btn addTarget:self action:@selector(clickedAction:) forControlEvents:UIControlEventTouchUpInside];
-		if (i == 0) {
-			btn.selected = YES;
-			UIView *lineV = [UIView new];
-			[_pageView addSubview:lineV];
-			_lineView = lineV;
-			_lineView.backgroundColor = [UIColor redColor];
-			_lineView.bounds = CGRectMake(0, 0, 50, 2);
-			_lineView.layer.cornerRadius = 1;
-			_lineView.layer.masksToBounds = YES;
-			_lineView.center = CGPointMake(btn.center.x, CGRectGetMaxY(btn.frame) - 2);
-		}
-	}
-
-	UIView *bottomLineV = [UIView new];
-	bottomLineV.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.5f];
-	bottomLineV.frame = CGRectMake(0, 39.0f, CGRectGetWidth(self.view.frame), 1);
-	[_pageView addSubview:bottomLineV];
-
+//	JXCategoryDotView *mlSegementHead = [[MLMSegmentHead alloc]initWithFrame:CGRectMake(0,CGRectGetMaxY(scrollView.frame), CGRectGetWidth(self.view.bounds),40) titles:@[@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传射雕英雄传射雕英雄传",@"雪山飞狐",@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传",@"雪山飞狐"] headStyle:SegmentHeadStyleLine];
+	JXCategoryTitleView *segement = [[JXCategoryTitleView alloc]initWithFrame:CGRectMake(0,CGRectGetMaxY(scrollView.frame), CGRectGetWidth(self.view.bounds),40)];
+	segement.titles = @[@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传射雕英雄传射雕英雄传",@"雪山飞狐",@"倚天屠龙记",@"神雕侠侣",@"射雕英雄传",@"雪山飞狐"];
+	segement.cellSpacing = 10;
+	segement.titleFont = [UIFont systemFontOfSize:16];
+	segement.separatorLineColor = [UIColor redColor];
+	segement.titleColor = [UIColor grayColor];
+	segement.titleSelectedColor = [UIColor redColor];
+	segement.contentScrollView = [pageVc containtScrollView];
+	JXCategoryIndicatorLineView *lineView = [[JXCategoryIndicatorLineView alloc] init];
+	lineView.lineStyle = JXCategoryIndicatorLineStyle_Lengthen;
+	segement.indicators = @[lineView];
+	segement.delegate = self;
+	segmentedControl = segement;
+	[headerView addSubview:segmentedControl];
 	UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
 	UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
 	_topNavView = effectView;
@@ -100,7 +90,6 @@
 	backBtn.frame = CGRectMake(10.0f, topY, 40, 40);
 	[backBtn setImage:[UIImage imageNamed:@"activity_back_icon"] forState:UIControlStateNormal];
 	[backBtn addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
-
 	[self.view addSubview:_topNavView];
 	[self.view addSubview:backBtn];
 
@@ -111,7 +100,7 @@
 	[self.view addSubview:titleLable];
 	titleLable.frame = CGRectMake(0, topY, CGRectGetWidth(self.view.frame), 40.0f);
 	titleLable.textAlignment = NSTextAlignmentCenter;
-
+	self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 -(void)backAction:(id)sender
@@ -121,7 +110,7 @@
 
 -(NSInteger)numerOfPageWithPageViewController:(BasePageViewController *)pageVc
 {
-	return 4;
+	return 8;
 }
 -(UIViewController *)loadSubVcWithPage:(NSInteger)page
 {
@@ -135,35 +124,28 @@
 //滚动到第几页了
 -(void)scrollToPage:(NSInteger)page
 {
-	for (int i = 0; i< 4; i++) {
-		UIButton *btn = [_pageView viewWithTag:(10 + 	i )];
-		if (page == i) {
-			btn.selected = YES;
-		}else{
-			btn.selected = NO;
-		}
-	}
+
 }
 //横向偏移到什么位置了
 -(void)pageScrollCurrentOffset:(CGPoint)offSet
 {
-	[_pageView bringSubviewToFront:_lineView];
-	CGFloat width = CGRectGetWidth(self.view.frame)/8.0f;
-	_lineView.center = (CGPoint){width + offSet.x/4.0f,_lineView.center.y};
+
 }
 //用来监听纵向滚动视图滚动到什么位置
 -(void)subScrollViewDidScrollOffSet:(CGPoint)offSet
 {
-	CGFloat alpa = offSet.y/140.0f;
-	alpa = MAX(0, alpa);
-	alpa = MIN(0.5, alpa);
-	_topNavView.backgroundColor  = [[UIColor whiteColor]colorWithAlphaComponent:alpa];
 }
 
--(void)clickedAction:(UIButton *)btn
+- (void)categoryView:(JXCategoryBaseView *)categoryView didClickSelectedItemAtIndex:(NSInteger)index
 {
-	NSInteger page = btn.tag - 10;
-	[_pageVc pageScrollToPage:page];
+	[_pageVc pageScrollToPage:index];
 }
+
+-(void)dealloc
+{
+	NSLog(@"viewController释放");
+	segmentedControl.contentScrollView = nil;
+}
+
 
 @end

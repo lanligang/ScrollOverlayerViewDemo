@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "LGCustomNavBar.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,8 @@
 	window.backgroundColor = [UIColor whiteColor];
 	RootViewController *rootVc = [[RootViewController alloc]init];
 	UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:rootVc];
+	LGCustomNavBar *bar = [[LGCustomNavBar alloc]init];
+	[nav setValue:bar forKey:@"navigationBar"];
 	self.window.rootViewController = nav;
 	return YES;
 }

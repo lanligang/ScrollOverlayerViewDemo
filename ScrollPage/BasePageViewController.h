@@ -36,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BasePageViewController : UIViewController
 
+
+
 //悬停部分的高度
 @property (nonatomic,assign)CGFloat overlayerHeight;
 //是否显示顶部 是否让headerView 的 y > 0
@@ -47,6 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 //外部调用滚动到某个位置
 -(void)pageScrollToPage:(NSInteger)page;
 
+-(UIScrollView *)containtScrollView;
 
 @end
 

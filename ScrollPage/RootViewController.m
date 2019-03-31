@@ -9,12 +9,15 @@
 #import "RootViewController.h"
 #import "ViewController.h"
 #import "ScrollNumber.h"
+#import "HeaderViewController.h"
+
 
 @interface RootViewController ()
 {
 	ScrollNumber *_numView;
 	NSInteger _endTimeLine;
 }
+
 @end
 
 @implementation RootViewController
@@ -70,8 +73,8 @@
 	tfV.frame = CGRectMake(10, CGRectGetMaxY(btn.frame) + 10, CGRectGetWidth(self.view.frame) - 20, 300.0f);
 	tfV.editable = NO;
 	[self.view addSubview:tfV];
-
 }
+
 -(void)ontimer
 {
 	NSInteger num = MAX(_endTimeLine - ( [[NSDate date] timeIntervalSince1970]/1), 0);
@@ -80,6 +83,9 @@
 
 -(void)onClicked:(id)sender
 {
+//	HeaderViewController *avc = [[HeaderViewController alloc]init];
+//	[self.navigationController pushViewController:avc animated:YES];
+//	return;
 	ViewController *vc = [[ViewController alloc]init];
 	[self.navigationController pushViewController:vc animated:YES];
 }

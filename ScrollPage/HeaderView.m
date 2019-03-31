@@ -13,6 +13,7 @@
 {
 	self = [super init];
 	if (self) {
+		self.userInteractionEnabled = YES;
 		if (@available (iOS 11.0, *)) {
 			self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 		}
